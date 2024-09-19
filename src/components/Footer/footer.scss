@@ -1,0 +1,91 @@
+@import '../../shared/mixines.scss';
+@import '../../shared/constans.scss';
+
+
+.footer{
+    box-sizing: border-box;
+    margin-top: 100px;
+
+    .footer-socialmedia{
+        height: 70px;
+        @include flex-center;
+        gap: 30px;
+        box-sizing: border-box;
+        background: $socialmedia-beckground;
+
+        .foote-icon {
+            width: 30px;
+            height: 30px;
+            fill: white;
+            cursor: pointer;
+        }
+
+        p{
+            font-size: 1.5em;
+            color: #fff;
+        }
+    }
+
+
+    .footer-info{
+        box-sizing: border-box;
+
+        display: flex;
+        padding: 40px;
+        text-align: left;
+        width: 100%;
+        gap: 100px;
+        background: $footer-background;
+        padding: 30px 60px;
+
+        p{
+            font-size: 16px;
+            line-height: 20px;
+            padding-bottom: 4px;
+            margin-bottom: 0;
+            font-weight: 600;
+            
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+                    
+                li{
+
+                    a{
+                        text-decoration: none;
+                        color: $footer-color;
+                        cursor: pointer;
+
+                        &:hover {
+                            text-decoration: underline;
+                        }
+                    }
+                }
+        }
+    }   
+
+    .footer-botton-wrapper{
+        background: $footer-background;
+        height: 45px;
+        display: flex;
+        justify-content: center;
+
+        .footer-botton{
+            width: 98%;
+            border-top: 1px solid $footer-color;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            p{
+                margin: 0;
+                color: $footer-color;
+            }
+        }
+    }
+}
