@@ -98,8 +98,14 @@
 
 .bodycontentright{
     flex-direction: row-reverse;
+    gap: 2%;
+
+    .bodycontent-content{
+        width: 45%;
+    }
 
     .bodycontent-img{
+        width: 53%;
         display: flex;
         justify-content: end;
         padding-right: 0;
