@@ -15,12 +15,12 @@ const Slider = () => {
             <ul className='slider-list'>
                 {
                     sliderContent.map((text, idx) => (
-                        <li key={text}>{text}</li>
+                        <li key={text+idx}>{text}</li>
                     ))
                 }
             </ul>
             <div className='slider-link'>
-                <a href="">Sign in</a>
+                <a href="https://localhost:44365/">Sign in</a>
             </div>
         </div>
     </section>
