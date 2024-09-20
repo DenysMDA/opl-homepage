@@ -1,31 +1,37 @@
 @import '../../shared/mixines.scss';
 @import '../../shared/constans.scss';
 
-.bodycontent, .bodycontentright{
+main {
+    margin-top: 80px;
+}
+
+.bodycontent,
+.bodycontentright {
     display: flex;
     width: 100%;
     height: 400px;
     box-sizing: border-box;
     margin-top: 50px;
+    max-width: $xxl;
+    margin: auto;
 
-    @media (min-width: 1600px){
-        height: 500px;
-
-    }
-
-
-    .bodycontent-img, .bodycontent-content{
+    .bodycontent-img,
+    .bodycontent-content {
         width: 50%;
-        padding: 40px;
+        padding: 40px 0;
         padding-left: 0;
         box-sizing: border-box;
 
-        .bodycontent-img_wrapper{
-            width: 90%;
+        .bodycontent-img_wrapper {
+            width: 95%;
             height: 100%;
             overflow: hidden;
             border-radius: 0 20px 20px 0;
-            @include block-img;   
+            @include block-img;
+
+            @media (min-width: $xxl) {
+                border-radius: 20px;
+            }
         }
 
         .first-img {
@@ -36,36 +42,34 @@
             background-image: url('../../assets/BodyContent_2.png');
         }
 
-        .third-img{
+        .third-img {
             background-image: url('../../assets/BodyContent_4.png');
         }
     }
 
-    .bodycontent-content{
+    .bodycontent-content {
         text-align: justify;
         position: relative;
-        padding: 50px;
+        padding: 50px 0 50px 50px;
 
-        h3{
-            margin: 0;
-            font-size: 2em;
-
-            @media (min-width: 1600px){
-                font-size: 2.7em;
-            }
+        @media (max-width: $xxl) {
+            padding: 50px;
         }
 
-        p{
-            @media (min-width: 1600px){
-                font-size: 1.5em;
-            }
-            
-            @media (max-width: 1100px){
+        h3 {
+            margin: 0;
+            font-size: 2em;
+        }
+
+        p {
+            font-size: 1.2em;
+
+            @media (max-width: $xl) {
                 font-size: .9em;
             }
         }
 
-        .bodycontent-btn{
+        .bodycontent-btn {
             background: $primarly-color;
             width: 100px;
             height: 30px;
@@ -75,18 +79,18 @@
             bottom: 50px;
             cursor: pointer;
 
-            
-            &:hover > a{
+
+            &:hover>a {
                 text-decoration: underline;
             }
 
-            @media (min-width: 1600px){
+            @media (min-width: 1600px) {
                 width: 150px;
                 height: 50px;
                 font-size: 1.3em;
             }
 
-            a{
+            a {
                 color: white;
                 text-decoration: none;
                 text-align: center;
@@ -96,49 +100,61 @@
     }
 }
 
-.bodycontentright{
+.bodycontentright {
     flex-direction: row-reverse;
-    gap: 2%;
 
-    .bodycontent-content{
-        width: 45%;
+    .bodycontent-content {
+        padding: 50px 50px 50px 0;
+
+        @media (max-width: $xxl) {
+            padding: 50px;
+        }
     }
 
-    .bodycontent-img{
-        width: 53%;
+    .bodycontent-img {
         display: flex;
         justify-content: end;
         padding-right: 0;
 
-        .bodycontent-img_wrapper{
-            border-radius: 20px 0 0 20px!important;
-
+        .bodycontent-img_wrapper {
+            @media (max-width: $xxl) {
+                border-radius: 20px 0 0 20px !important;
+            }
         }
     }
-
-
 }
 
-.bodycontent-prefooter{
+.bodycontent-prefooter {
     margin: auto;
-    width: 90%;
+    max-width: $xxl;
     margin-top: 100px;
 
+    @media (max-width: $xxl) {
+        padding: 50px;
+        margin-top: 0;
+    }
 
+    .mySwiper {
 
-    .mySwiper{
-
-        .slider-img{
+        .slider-img {
             width: 150px;
 
-            @media (max-width: 1350px){
+            @media (max-width: $xxl) {
+                width: 120px;
+            }
+
+            @media (max-width: $xl) {
                 width: 100px;
+            }
+
+            @media (max-width: $lg) {
+                width: 80px;
             }
         }
 
-        .swiper-pagination{
+        .swiper-pagination {
             margin-top: 100px;
         }
     }
-      
+
 }
