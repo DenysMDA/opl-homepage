@@ -8,19 +8,19 @@ const sliderContent = [
 
 const Slider = () => {
   return (
-    <section className='slider-container'>
+    <section className='slider-container' aria-labelledby="slider-title">
         <div className='slider-content'>
-            <h1 className='slider-title'>Welcome to Operator Connect</h1>
+            <h1 className='slider-title' id="slider-title">Welcome to Operator Connect</h1>
             <p className='sleder-description'>Operator Connect allows organizations to connect Microsoft Teams to the Public Switched Telephone Network (PSTN) for voice, emergency, and messaging services</p>
-            <ul className='slider-list'>
+            <ul className='slider-list' role="list" aria-label="Operator Connect Features">
                 {
                     sliderContent.map((text, idx) => (
-                        <li key={text+idx}>{text}</li>
+                        <li key={`${text}_${idx}`}>{text}</li>
                     ))
                 }
             </ul>
             <div className='slider-link'>
-                <a href="https://localhost:44365/">Sign in</a>
+                <a href="https://localhost:44365/" aria-label="Sign in to Operator Connect">Sign in</a>
             </div>
         </div>
     </section>
