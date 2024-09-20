@@ -13,7 +13,7 @@ const Header = () => {
   
 
   return (
-    <div className='header-container'>
+    <header className='header-container'>
         <a href="https://www.microsoft.com/en-ca/" className='header-link'><img src={MicrosoftHeaderLogo} alt='logo' width={90} height={20} className='header-logo'></img></a>
         <p className='header-title'>Operator Connect Portal</p>
         
@@ -26,10 +26,10 @@ const Header = () => {
               ))
           }
         </nav>
-        <a className='header-login' href="#">
+        <a className='header-login' href="https://localhost:44365/">
             <span>Sign in</span>
           </a>
-    </div>
+    </header>
   )
 }
 
