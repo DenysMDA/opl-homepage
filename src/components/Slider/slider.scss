@@ -1,80 +1,86 @@
-.slider-container{
+@import '../../shared/mixines.scss';
+@import '../../shared/constans.scss';
+
+.slider-container {
     height: 500px;
     position: relative;
 
-    background: 
-    linear-gradient(to right, rgba(0, 0, 0, 3.7) 15%, rgba(0, 0, 0, 0)), /* Тёмный градиент слева направо */
-    url('../../assets/teams-2.png'); 
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center; 
+    background:
+        linear-gradient(to right, rgba(0, 0, 0, 3.7) 15%, rgba(0, 0, 0, 0)),
+        url('../../assets/teams-2.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 
-  .slider-content{
-    width: 50%;
-    height: 100%;
-    padding: 40px;
-    box-sizing: border-box;
-    position: relative;
+    .slider-content {
+        max-width: $xxl;
+        margin: auto;
+        height: 100%;
+        padding: 40px;
+        box-sizing: border-box;
+        position: relative;
 
-    .slider-title{
-        color: white;
-        text-align: left;
-        font-size: 3em;
-        padding: 0;
-        margin: 0;
-
-        @media (max-width: 1300px){
-            font-size: 2em;
-        }
-    }
-
-    .sleder-description{
-        color: white;
-        font-size: 1em;
-        text-align: left;
-        font-size: 16px;
-
-        @media (max-width: 1300px){
-            font-size:1em;
-        }
-    }
-
-    .slider-list{
-        width: 90%;
-        color: white;
-        text-align: justify;
-        padding-left: 20px;
-        margin-top: 40px;
-
-        li {
-            margin-bottom: 10px;
-        }
-
-        @media (max-width: 900px){
-            display: none;
-        }
-    }
-
-    .slider-link{
-        height: 30px;
-        width: 100px;
-        display: flex;
-        // margin-top: 30px;
-        justify-content: center;
-        align-items: center;
-        // margin-left: 30px;
-        border: 1px solid white;
-        position: absolute;
-        bottom: 40px;
-
-        a{
+        .slider-title {
             color: white;
-            text-decoration: none;
-            transition: .3s;
-            &:hover{
-                text-decoration: underline;
+            text-align: left;
+            font-size: 3em;
+            padding: 0;
+            margin: 0;
+
+            @media (max-width: 1300px) {
+                font-size: 2em;
+            }
+        }
+
+        .sleder-description {
+            width: 50%;
+            color: white;
+            font-size: 1em;
+            text-align: left;
+            font-size: 16px;
+
+            @media (max-width: 1300px) {
+                font-size: 1em;
+            }
+        }
+
+        .slider-list {
+            width: 50%;
+            color: white;
+            text-align: justify;
+            padding-left: 20px;
+            margin-top: 40px;
+
+            li {
+                margin-bottom: 10px;
+            }
+
+            @media (max-width: 900px) {
+                display: none;
+            }
+        }
+
+        .slider-link {
+            height: 30px;
+            width: 100px;
+            display: flex;
+            // margin-top: 30px;
+            justify-content: center;
+            align-items: center;
+            // margin-left: 30px;
+            border: 1px solid white;
+            position: absolute;
+            bottom: 40px;
+
+            a {
+                color: white;
+                text-decoration: none;
+                transition: .3s;
+
+                &:hover {
+                    text-decoration: underline;
+                }
             }
         }
     }
-  }
 }
