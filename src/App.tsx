@@ -1,4 +1,4 @@
-import './App.css';
+import './App.scss';
 import './pages/Opl'
 import Opl from './pages/Opl';
 

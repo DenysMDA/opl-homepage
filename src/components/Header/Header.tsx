@@ -21,7 +21,7 @@ const Header = () => {
       <nav className='header-nav' aria-label="Main Navigation">
         {
           navigation.map((n, i) => (
-            <div key={`${n.link}-${i}`}>
+            <div key={`${n.link}-${i}`} style={{animationDelay: `${i * 0.2}s`}}>
               <a href={n.link} aria-label={`Navigate to ${n.title}`} target="_blank" rel="noopener noreferrer">{n.title}</a>
             </div>
           ))

@@ -1,5 +1,6 @@
 @import '../../shared/mixines.scss';
 @import '../../shared/constans.scss';
+@import '../../shared/animation.scss';
 
 .header-container{
     max-width: $xxl;
@@ -36,7 +37,11 @@
         gap: 20px;
 
         div{
+            // opacity: 0;
             height: 20px;
+            // animation-duration: .5s;
+            // animation-name: slideDown;
+            // animation-fill-mode: forwards;
 
             a {
                 text-decoration: none;
