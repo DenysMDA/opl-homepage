@@ -1,9 +1,14 @@
+@import '../../shared/mixines.scss';
+@import '../../shared/constans.scss';
+
 .header-container{
-    // width: 100vw;
-    // height: 50px;
+    max-width: $xxl;
+    position: relative;
+    margin: auto;
     display: flex;
     align-items: center;
     padding: 20px 40px 20px 40px;
+    box-sizing: border-box;
 
     .header-logo{
      padding-right: 20px;
