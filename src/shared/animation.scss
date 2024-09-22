@@ -1,10 +1,33 @@
 @keyframes slideDown {
-    from {
-      opacity: 0;
-      margin-top: -30px; 
-    }
-    to {
-      opacity: 1;
-      margin-top: 0px; 
+  from {
+    opacity: 0;
+    margin-top: -30px;
+  }
+
+  to {
+    opacity: 1;
+    margin-top: 0px;
+  }
+}
+
+@keyframes slideHideDown {
+  from {
+    opacity: 1;
+    margin-top: 0px;
+  }
+
+  to {
+    opacity: 0;
+    margin-top: 30px;
+  }
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
   }
 }
