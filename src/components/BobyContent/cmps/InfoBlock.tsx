@@ -21,14 +21,16 @@ const infoNavTitle = [
 const InfoBlock = () => {
 
     const [number, setNumber] = useState(0)
-    const  [Animation, setAnimation] = useState('appear;')
+    const [Animation, setAnimation] = useState('appear;')
+    const [content, setContent] = useState(infoNavTitle[number].content)
 
     useEffect(() => {
+        setContent(infoNavTitle[number].content)
         setAnimation('');
         const timeoutId = setTimeout(() => {
             setAnimation('appear');
-        }, 10); 
-    
+        }, 100);
+
         return () => clearTimeout(timeoutId);
     }, [number])
 
@@ -36,13 +38,13 @@ const InfoBlock = () => {
         <section className='info-container'>
             <div className='info-nav'>
                 {
-                    infoNavTitle.map(({title}, i) => {
+                    infoNavTitle.map(({ title }, i) => {
                         const isActive = number === i;
                         const className = `info-title${isActive ? '__active' : ''}`;
 
                         return (
                             <div className={className} key={`${title}_${i}`} onClick={() => setNumber(i)}>
-                               <span>{title}</span> 
+                                <span>{title}</span>
                             </div>
                         )
                     })
@@ -50,11 +52,11 @@ const InfoBlock = () => {
             </div>
 
             <div className={`info-content-wrapper info-content-wrapper__${number}`}>
-                <ul className='info-content' style={{animationName: Animation}}>
+                <ul className='info-content' style={{ animationName: Animation }}>
                     {
-                      infoNavTitle[number].content.map((content, i) => (
-                        <li key={content}>{content}</li>
-                      ))  
+                        content.map((content, i) => (
+                            <li key={content}>{content}</li>
+                        ))
                     }
                 </ul>
             </div>
